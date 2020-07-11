@@ -12,8 +12,8 @@ apt install openvpn nginx php7.0-fpm stunnel4 squid3 dropbear easy-rsa vnstat uf
 MYIP=`ifconfig eth0 | awk 'NR==2 {print $2}'`
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 cd /root
-wget "https://raw.githubusercontent.com/wangzki03/VPSauto/master/tool/plugin.tgz"
-wget "https://raw.githubusercontent.com/wangzki03/VPSauto/master/tool/premiummenu.zip"
+wget "https://github.com/nstfreenet/premium/blob/master/plugin.tgz?raw=true"
+wget "https://github.com/nstfreenet/premium/blob/master/premiummenu.zip?raw=true"
 
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
@@ -408,7 +408,7 @@ echo "   - Installation Log        : cat /root/log-install.txt"  | tee -a log-in
 echo ""  | tee -a log-install.txt
 echo "   - Webmin                  : http://$MYIP:10000/"  | tee -a log-install.txt
 echo ""
-echo "------------------------------ Modified by Wangzki -----------------------------"
-echo "-----Rebooting your VPS -----"
+echo "------------------------------ Modified by NSTFREENET -----------------------------"
+echo "-----Rebooting your VPS tunggu 1-3 menit an  -----"
 sleep 5
 reboot
